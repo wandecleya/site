@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import React from 'react';
 
-import recipe from '../src/data/feijao.json';
+import recipe from '../src/data/recipes/feijao.json';
 
 const Comendo = () => {
   return (
