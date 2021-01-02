@@ -1,13 +1,22 @@
 import Head from 'next/head'
 import React from 'react';
 
-import recipe from '../src/data/recipes/feijao.json';
+import allRecipes from '../src/data/allRecipes.json';
+
+const Recipe = ({recipe}) => {
+  return <>
+    <h2>{recipe.titulo}</h2>
+  </>
+}
 
 const Comendo = () => {
   return (
     <div>
       <main>
-          <h2>{recipe.titulo}</h2>
+          <h1>Receitas</h1>
+
+        {allRecipes.recipes.map((recipe) => <Recipe recipe={recipe} />)}
+
       </main>
     </div>
   )
